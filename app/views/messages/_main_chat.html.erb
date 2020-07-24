@@ -9,24 +9,7 @@
     </div>
   </div>
   <div class="main_center">
-    <div class="message">
-      <div class="message_up">
-        <div class="message_name">へずまりゅう</div>
-        <div class="message_time">2020/07/22 19:35:16</div>
-      </div>
-      <div class="message_down"> 
-        <div class="message_comment">会計前に食ったった！</div>
-      </div>
-    </div>
-    <div class="message">
-      <div class="message_up">
-        <div class="message_name">へずまりゅう</div>
-        <div class="message_time">2020/07/22 19:38:08</div>
-      </div>
-      <div class="message_down"> 
-        <div class="message_comment">その後、ちゃんと会計はしたで！</div>
-      </div>
-    </div>
+    <%= render partial: 'message', collection: @messages %>
   </div>
     <%= form_with model: [@room, @message], html: {class: "main_down"}, local: true do |f|%>
     <div class="form_message">
